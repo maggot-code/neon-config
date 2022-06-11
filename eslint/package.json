@@ -1,6 +1,6 @@
 {
-    "name": "node-eslint-config",
-    "version": "1.0.1",
+    "name": "@wiede/eslint-config",
+    "version": "1.0.2",
     "description": "",
     "main": "index.js",
     "files": [
@@ -16,5 +16,11 @@
     "bugs": {
         "url": "https://github.com/maggot-code/neon-config/issues"
     },
-    "homepage": "https://github.com/maggot-code/neon-config#readme"
+    "homepage": "https://github.com/maggot-code/neon-config#readme",
+    "devDependencies": {
+        "eslint": "^8.17.0"
+    },
+    "dependencies": {
+        "eslint-plugin-vue": "^9.1.1"
+    }
 }

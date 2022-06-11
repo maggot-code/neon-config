@@ -1,6 +1,6 @@
 {
-    "name": "neon-vscode-config",
-    "version": "1.0.0",
+    "name": "@wiede/vscode-config",
+    "version": "1.0.1",
     "description": "",
     "main": "index.js",
     "files": [
