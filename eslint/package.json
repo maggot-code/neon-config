@@ -4,9 +4,15 @@
     "description": "",
     "main": "index.js",
     "files": [
-        "index.js"
+        "*.js"
     ],
-    "scripts": {},
+    "keywords": ["eslint-config"],
+    "scripts": {
+        "lint": "eslint . --config=index.js"
+    },
+    "peerDependencies": {
+        "eslint": ">=7.4.0"
+    },
     "repository": {
         "type": "git",
         "url": "git+https://github.com/maggot-code/neon-config.git"
@@ -21,6 +27,9 @@
         "eslint": "^8.17.0"
     },
     "dependencies": {
-        "eslint-plugin-vue": "^9.1.1"
+        "eslint-plugin-html": "^6.2.0",
+        "eslint-plugin-jsonc": "^2.3.0",
+        "eslint-plugin-vue": "^9.1.1",
+        "jsonc-eslint-parser": "^2.1.0"
     }
 }
