@@ -1,12 +1,14 @@
 {
     "name": "@wiede/eslint-config",
-    "version": "1.0.2",
+    "version": "1.1.0",
     "description": "",
     "main": "index.js",
     "files": [
         "*.js"
     ],
-    "keywords": ["eslint-config"],
+    "keywords": [
+        "eslint-config"
+    ],
     "scripts": {
         "lint": "eslint . --config=index.js"
     },
