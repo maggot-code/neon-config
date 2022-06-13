@@ -3,7 +3,7 @@
  * @Author: maggot-code
  * @Date: 2022-06-12 03:52:45
  * @LastEditors: maggot-code
- * @LastEditTime: 2022-06-12 23:58:36
+ * @LastEditTime: 2022-06-14 00:35:26
  * @Description: eslint config package
  */
 module.exports = {
@@ -15,6 +15,7 @@ module.exports = {
     extends: [
         './share.js',
         './vue.js',
+        'plugin:jsonc/recommended-with-jsonc',
     ],
     // reportUnusedDisableDirectives: true,
     ignorePatterns: [

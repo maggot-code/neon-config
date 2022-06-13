@@ -10,7 +10,8 @@
         "eslint-config"
     ],
     "scripts": {
-        "lint": "eslint . --config=index.js"
+        "lint": "eslint . --config=index.js",
+        "lint:fix":"eslint . --config=index.js --fix"
     },
     "peerDependencies": {
         "eslint": ">=7.4.0"
