@@ -3,7 +3,7 @@
  * @Author: maggot-code
  * @Date: 2022-06-12 23:36:00
  * @LastEditors: maggot-code
- * @LastEditTime: 2022-06-12 23:51:12
+ * @LastEditTime: 2022-06-14 01:12:27
  * @Description: 
  */
 module.exports = {
@@ -22,7 +22,8 @@ module.exports = {
         }
     ],
     extends: [
-        'plugin:vue/vue3-recommended'
+        'plugin:vue/vue3-recommended',
+        './typescript.js',
     ],
     rules: {
         'vue/no-setup-props-destructure': ['error'],
@@ -35,5 +36,7 @@ module.exports = {
 
         // [ 控制vue文件中tag的位置和顺序 ]
         'vue/component-tags-order': 'off',
+        'vue/valid-template-root': 'off',
+        'vue/html-self-closing': 'off',
     }
 }

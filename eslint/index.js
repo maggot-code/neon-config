@@ -3,7 +3,7 @@
  * @Author: maggot-code
  * @Date: 2022-06-12 03:52:45
  * @LastEditors: maggot-code
- * @LastEditTime: 2022-06-14 00:35:26
+ * @LastEditTime: 2022-06-14 00:55:06
  * @Description: eslint config package
  */
 module.exports = {

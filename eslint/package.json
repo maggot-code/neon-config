@@ -11,7 +11,10 @@
     ],
     "scripts": {
         "lint": "eslint . --config=index.js",
-        "lint:fix":"eslint . --config=index.js --fix"
+        "lint:fix": "eslint . --config=index.js --fix"
+    },
+    "publishConfig": {
+        "access": "public"
     },
     "peerDependencies": {
         "eslint": ">=7.4.0"
@@ -27,9 +30,12 @@
     },
     "homepage": "https://github.com/maggot-code/neon-config#readme",
     "devDependencies": {
-        "eslint": "^8.17.0"
+        "eslint": "^8.17.0",
+        "typescript": "^4.7.3"
     },
     "dependencies": {
+        "@typescript-eslint/eslint-plugin": "^5.27.1",
+        "@typescript-eslint/parser": "^5.27.1",
         "eslint-plugin-html": "^6.2.0",
         "eslint-plugin-jsonc": "^2.3.0",
         "eslint-plugin-vue": "^9.1.1",
