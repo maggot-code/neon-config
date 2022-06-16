@@ -1,0 +1,27 @@
+{
+    "name": "@wiede/eslint-config-share",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "files": [
+        "*.js"
+    ],
+    "keywords": [
+        "eslint-config",
+        "eslint-config-share"
+    ],
+    "scripts": {},
+    "publishConfig": {
+        "access": "public"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/maggot-code/neon-config.git"
+    },
+    "author": "maggot-code",
+    "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/maggot-code/neon-config/issues"
+    },
+    "homepage": "https://github.com/maggot-code/neon-config#readme"
+}
