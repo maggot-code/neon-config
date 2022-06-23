@@ -3,7 +3,7 @@
  * @Author: maggot-code
  * @Date: 2022-06-18 17:34:23
  * @LastEditors: maggot-code
- * @LastEditTime: 2022-06-23 16:41:16
+ * @LastEditTime: 2022-06-23 17:49:17
  * @Description: 
  */
 module.exports = {
@@ -326,8 +326,6 @@ module.exports = {
         // [ NodeJS 或者 CommonJS相关 end ]
 
         // [ ES6相关 start ]
-        // 允许箭头函数的函数体不适用大括号
-        'arrow-body-style': 'off',
         // 不要求 generator 函数中的 * 号周围使用一致的空格
         'generator-star-spacing': 'off',
         // 不检查比较操作符是否容易混淆问题
@@ -351,7 +349,9 @@ module.exports = {
         // 不检查模板字符串表达式周围的空格问题
         'template-curly-spacing': 'off',
         // 不检查在 yield* 表达式中 * 周围的空格使用问题
-        'yield-star-spacing':'off',
+        'yield-star-spacing': 'off',
+        // 允许箭头函数的函数体不适用大括号
+        'arrow-body-style': 'off',
 
         // 要求使用模板字符串而不是字符串拼接（不会报错而是警告!）
         'prefer-template':['warn'],
@@ -378,7 +378,7 @@ module.exports = {
         // 要求 symbol 使用的时候增加描述
         'symbol-description':['error'],
         // 禁止在使用 [import、export、解构赋值] 的时候将引用重命名为相同的名字
-        'no-useless-rename':['error'],
+        'no-useless-rename': ['error'],
 
         // 强制要求箭头函数的箭头前后使用一致的空格
         'arrow-spacing': ['error', { before: true, after: true }],
