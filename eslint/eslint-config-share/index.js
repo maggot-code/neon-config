@@ -1,9 +1,9 @@
 /*
- * @FilePath: /neon-config/eslint/eslint-config-share/index.js
+ * @FilePath: \neon-config\eslint\eslint-config-share\index.js
  * @Author: maggot-code
  * @Date: 2022-06-18 17:34:23
  * @LastEditors: maggot-code
- * @LastEditTime: 2022-06-23 01:56:45
+ * @LastEditTime: 2022-06-23 16:41:16
  * @Description: 
  */
 module.exports = {
@@ -134,6 +134,8 @@ module.exports = {
         'no-implicit-globals': 'off',
         // 允许 this 关键字出现在类和对象之外的地方，例如 function
         'no-invalid-this': 'off',
+        // 允许多余的 return 语句，类似配置由其他规则限制
+        'no-useless-return':'off',
         // 允许随意嵌套块（嵌套块由其他规则定义）
         'no-lone-blocks': 'off',
         // 允许循环中出现函数声明（循环函数声明由其他规则定义）
@@ -202,8 +204,6 @@ module.exports = {
         'no-octal-escape': ['error'],
         // 禁止使用 .call() 和 .apply()
         'no-useless-call': ['error'],
-        // 禁止多余的 return 语句
-        'no-useless-return':['error'],
         // 强制要求变量的使用与定义在相同的作用域中
         'block-scoped-var': ['error'],
         // 禁用 arguments.caller 或 arguments.callee，ES5已经弃用
@@ -280,12 +280,143 @@ module.exports = {
         // [ 最佳实践 end ]
 
         // [ 变量相关 start ]
+        // 不检查 var 声明初始化
+        'init-declarations': 'off',
+        // 不检查标签与变量同名的情况，其他规则限制了标签的使用规则
+        'no-label-var': 'off',
+        // 不检查特定的全局变量（看了ESLint说明，没懂什么意思，先忽略）
+        'no-restricted-globals': 'off',
+        // 允许变量声明与外层作用域的变量同名
+        'no-shadow': 'off',
+        // 允许未声明的变量(没看懂，ESLint推荐开启了，先忽略掉)
+        'no-undef':'off',
+        
+        // 禁止删除变量
+        'no-delete-var': ['error'],
+        // 禁止将标识符定义为不可用的名字（不能使用保留的关键字）
+        'no-shadow-restricted-names': ['error'],
+        // 禁止将变量初始化为 undefined
+        'no-undef-init': ['error'],
+        // 禁止将 undefined 作为标识符
+        'no-undefined': ['error'],
+
+        // 禁止出现未使用过的变量，如果需要可以使用 "_"（下划线）来标识变量，让eslint忽略它
+        'no-unused-vars': ['error', { argsIgnorePattern: '^_' }],
+        // 禁止在变量定义之前使用它们，允许 function 和 class 在定义之前使用（默认会提升）
+        'no-use-before-define':['error',{ functions: false, classes: false, variables: true }],
         // [ 变量相关 end ]
         
         // [ NodeJS 或者 CommonJS相关 start ]
+        // 不检查 required() 方法出现的作用域
+        'global-require': 'off',
+        // ** 不要求回调函数中由容错处理，后面有需要会重新定义该规则
+        'handle-callback-err': 'off',
+        // 允许使用 Buffer() 构造函数，兼容低版本 NodeJS
+        'no-buffer-constructor': 'off',
+        // 允许对 __dirname 和 __filename 进行字符串拼接
+        'no-path-concat': 'off',
+        // 允许使用 process.env 来得到环境变量
+        'no-process-env': 'off',
+        // 允许使用 process.exit() 来结束进程
+        'no-process-exit': 'off',
+        // 允许通过 require 加载指定的魔铠
+        'no-restricted-modules': 'off',
+        // 允许使用同步方法
+        'no-sync':'off',
         // [ NodeJS 或者 CommonJS相关 end ]
 
         // [ ES6相关 start ]
+        // 允许箭头函数的函数体不适用大括号
+        'arrow-body-style': 'off',
+        // 不要求 generator 函数中的 * 号周围使用一致的空格
+        'generator-star-spacing': 'off',
+        // 不检查比较操作符是否容易混淆问题
+        'no-confusing-arrow': 'off',
+        // 不检查使用指定的 import 加载模块
+        'no-restricted-imports': 'off',
+        // 不检查是否在对象中使用计算属性
+        'no-useless-computed-key': 'off',
+        // 不检查构造函数的必要性
+        'no-useless-constructor': 'off',
+        // 不检查对象字面量中方法和属性是否使用简写语法
+        'object-shorthand': 'off',
+        // 不检查解构的使用方式
+        'prefer-destructuring': 'off',
+        // 不检查 parseInt() 和 Number.parseInt() 方法的参数字面量规则
+        'prefer-numeric-literals': 'off',
+        // 不检查 generator 函数中是否存在 yield
+        'require-yield': 'off',
+        // 不检查剩余和扩展运算符与表达式之间是否存在空格
+        'rest-spread-spacing': 'off',
+        // 不检查模板字符串表达式周围的空格问题
+        'template-curly-spacing': 'off',
+        // 不检查在 yield* 表达式中 * 周围的空格使用问题
+        'yield-star-spacing':'off',
+
+        // 要求使用模板字符串而不是字符串拼接（不会报错而是警告!）
+        'prefer-template':['warn'],
+        // 要求使用 let 或者 const 而不是 var
+        'no-var':['error'],
+        // 禁止修改 const 声明的变量
+        'no-const-assign':['error'],
+        // 要求箭头函数的参数部分必须使用圆括号
+        'arrow-parens': ['error'],
+        // 要求使用剩余参数而不是 arguments 对象 (...args)
+        'prefer-rest-params': ['error'],
+        // 要求使用扩展运算符而不是 .apply() 方法
+        'prefer-spread':['error'],
+        // 要求在构造函数中必须出现 super() 的调用
+        'constructor-super': ['error'],
+        // 禁止构造函数中 调用 super() 之前使用 this 或者 super
+        'no-this-before-super':['error'],
+        // 禁止修改类声明的变量
+        'no-class-assign': ['error'],
+        // 禁止类成员中出现重复的名称
+        'no-dupe-class-members': ['error'],
+        // 禁止对 Symbol 使用 new 关键字
+        'no-new-symbol': ['error'],
+        // 要求 symbol 使用的时候增加描述
+        'symbol-description':['error'],
+        // 禁止在使用 [import、export、解构赋值] 的时候将引用重命名为相同的名字
+        'no-useless-rename':['error'],
+
+        // 强制要求箭头函数的箭头前后使用一致的空格
+        'arrow-spacing': ['error', { before: true, after: true }],
+        // 要求回调函数中使用箭头函数
+        'prefer-arrow-callback': ['error', { allowNamedFunctions: false, allowUnboundThis: true }],
+        // 要求使用 const 声明的那些声明后不再被修改的变量
+        // 没太懂什么意思，总之 const 声明对象或数组，解构之后还是 const 不能直接修改;
+        'prefer-const':['error',{ destructuring: 'all', ignoreReadBeforeAssign: true }],
+        /**
+         * 禁止重复的模块导入, 不允许使用 export ... from
+         * bad:
+         * import { a } from 'module';
+         * export { b } from 'module';
+         * good：
+         * import { a, b } from 'module';
+         * export { b }
+         */
+        'no-duplicate-imports': ['error', { includeExports: true }],
+        /**
+         * **强制模块中的 import 排序(这个规则后续在做调整)
+         * ignoreCase: 忽略大小写
+         * ignoreDeclarationSort: 忽略声明语句的排序
+         * ignoreMemberSort: 忽略多个成员属性声明语句的排序
+         * memberSyntaxSortOrder: 不同风格的排列顺序
+         *  -none - import 没有输出绑定的模块。
+            -all - import 所有经输出绑定的成员。
+            -multiple - import 多个成员。
+            -single - import 单个成员。
+         */
+        'sort-imports': [
+            'error',
+            {
+                ignoreCase: false,
+                ignoreDeclarationSort: true,
+                ignoreMemberSort: true,
+                memberSyntaxSortOrder: ['none', 'all', 'multiple', 'single'],
+            }
+        ],
         // [ ES6相关 end ]
 
         // [ 代码风格相关 start ]
