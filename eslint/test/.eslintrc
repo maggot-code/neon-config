@@ -1,3 +1,8 @@
 {
-    "extends": []
+    "extends": [
+        "../eslint-config-share/index.js",
+        "prettier"
+    ],
+    "plugins": [],
+    "rules": {}
 }

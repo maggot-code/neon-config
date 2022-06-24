@@ -3,7 +3,7 @@
  * @Author: maggot-code
  * @Date: 2022-06-18 17:34:23
  * @LastEditors: maggot-code
- * @LastEditTime: 2022-06-23 17:49:17
+ * @LastEditTime: 2022-06-24 14:58:31
  * @Description: 
  */
 module.exports = {
@@ -301,7 +301,11 @@ module.exports = {
         'no-undefined': ['error'],
 
         // 禁止出现未使用过的变量，如果需要可以使用 "_"（下划线）来标识变量，让eslint忽略它
-        'no-unused-vars': ['error', { argsIgnorePattern: '^_' }],
+        'no-unused-vars': ['error', {
+            varsIgnorePattern:'^_',
+            argsIgnorePattern: '^_',
+            caughtErrorsIgnorePattern:'^_'
+        }],
         // 禁止在变量定义之前使用它们，允许 function 和 class 在定义之前使用（默认会提升）
         'no-use-before-define':['error',{ functions: false, classes: false, variables: true }],
         // [ 变量相关 end ]
