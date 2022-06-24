@@ -3,13 +3,17 @@
     "version": "1.0.0",
     "description": "",
     "main": "index.js",
-    "scripts": {},
+    "scripts": {
+        "prettier": "prettier --write .",
+        "test:lint": "eslint . && prettier --check ."
+    },
     "keywords": [],
     "author": "",
     "license": "MIT",
     "devDependencies": {
         "eslint": "^8.18.0",
         "eslint-config-prettier": "^8.5.0",
+        "eslint-plugin-prettier": "^4.0.0",
         "prettier": "^2.7.1"
     }
 }

@@ -3,6 +3,10 @@
         "../eslint-config-share/index.js",
         "prettier"
     ],
-    "plugins": [],
-    "rules": {}
+    "plugins": [
+        "prettier"
+    ],
+    "rules": {
+        "prettier/prettier":["error"]
+    }
 }
