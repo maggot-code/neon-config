@@ -3,10 +3,7 @@
     "version": "1.0.0",
     "description": "",
     "main": "index.js",
-    "scripts": {
-        "prettier": "prettier --write .",
-        "test:lint": "eslint . && prettier --check ."
-    },
+    "scripts": {},
     "keywords": [],
     "author": "",
     "license": "MIT",
