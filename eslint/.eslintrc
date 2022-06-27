@@ -1,9 +1,5 @@
 {
-    "extends": [
-        "./eslint-config-share/index.js",
-        "./eslint-config-vue/index.js",
-        "prettier"
-    ],
+    "extends": ["./eslint-config-share/index.js", "prettier"],
     "plugins": ["prettier"],
     "rules": {
         "prettier/prettier": ["error"]
