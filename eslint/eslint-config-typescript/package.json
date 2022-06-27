@@ -23,5 +23,12 @@
     "bugs": {
         "url": "https://github.com/maggot-code/neon-config/issues"
     },
-    "homepage": "https://github.com/maggot-code/neon-config#readme"
+    "homepage": "https://github.com/maggot-code/neon-config#readme",
+    "devDependencies": {
+        "eslint": "^8.18.0"
+    },
+    "dependencies": {
+        "@typescript-eslint/eslint-plugin": "^5.29.0",
+        "@typescript-eslint/parser": "^5.29.0"
+    }
 }
