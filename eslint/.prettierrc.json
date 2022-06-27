@@ -12,7 +12,7 @@
     "endOfLine":"lf",
     "embeddedLanguageFormatting":"off",
     "proseWrap":"never",
-    "htmlWhitespaceSensitivity":"strict",
+    "htmlWhitespaceSensitivity":"css",
     "jsxSingleQuote":false,
     "insertPragma":false,
     "requirePragma":false,

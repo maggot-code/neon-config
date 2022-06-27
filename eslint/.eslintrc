@@ -1,12 +1,14 @@
 {
     "extends": [
-        "../eslint-config-share/index.js",
+        "./eslint-config-share/index.js",
         "prettier"
     ],
     "plugins": [
         "prettier"
     ],
     "rules": {
-        "prettier/prettier": "error"
+        "prettier/prettier": [
+            "error"
+        ]
     }
 }

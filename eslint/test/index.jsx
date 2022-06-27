@@ -1,25 +1,27 @@
 /*
- * @FilePath: /neon-config/eslint/test/index.jsx
- * @Author: maggot-code
- * @Date: 2022-06-25 19:00:35
- * @LastEditors: maggot-code
- * @LastEditTime: 2022-06-27 00:51:20
+ * @FilePath: \neon-config\eslint\test\index.jsx
+ * @Author: zhangyang
+ * @Date: 2022-06-27 10:49:47
+ * @LastEditors: zhangyang
+ * @LastEditTime: 2022-06-27 14:17:03
  * @Description:
  */
-const label = 'Label';
+const title = 'Hello Eslint';
 
-function handlerClick() {
-    console.log(label);
+function sayTitle() {
+    console.log(title);
 }
 
 export default () => {
     return (
-        <div
-            className="neon-label"
-            id="neon-label"
-            onClick={handlerClick}
-        >
-            {label}
-        </div>
+        <>
+            <h1
+                className="neon-eslint"
+                id="neon-eslist"
+                onClick={sayTitle}
+            >
+                {title}
+            </h1>
+        </>
     );
 };
