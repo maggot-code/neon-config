@@ -15,11 +15,7 @@ function sayTitle() {
 export default () => {
     return (
         <>
-            <h1
-                className="neon-eslint"
-                id="neon-eslist"
-                onClick={sayTitle}
-            >
+            <h1 className="neon-eslint" id="neon-eslist" onClick={sayTitle}>
                 {title}
             </h1>
         </>

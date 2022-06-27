@@ -96,17 +96,11 @@ module.exports = {
         'use-isnan': ['error'],
 
         // typeof 表达式必须与有效字符串比较，允许与另一个 typeof 表达式比较
-        'valid-typeof': [
-            'error',
-            { requireStringLiterals: true },
-        ],
+        'valid-typeof': ['error', { requireStringLiterals: true }],
         // getter函数必须存在return关键字，允许直接return
         'getter-return': ['error', { allowImplicit: true }],
         // 禁止条件表达式中出现常量，允许在循环中使用，如：while(true)
-        'no-constant-condition': [
-            'error',
-            { checkLoops: false },
-        ],
+        'no-constant-condition': ['error', { checkLoops: false }],
         // 禁止出现空语句夸块，可以写入注释，允许空的 catch 语句块
         'no-empty': ['error', { allowEmptyCatch: true }],
         // 禁止不必要的括号,只检查函数表达式
@@ -251,22 +245,13 @@ module.exports = {
 
         // 强制要求使用数组方法的回调函数中必须出现 return 关键字
         // 允许直接 return (隐式返回 undenfind)
-        'array-callback-return': [
-            'error',
-            { allowImplicit: true },
-        ],
+        'array-callback-return': ['error', { allowImplicit: true }],
         // 禁止使用多个空格，允许忽略行尾或注释之前的空格
-        'no-multi-spaces': [
-            'error',
-            { ignoreEOLComments: false },
-        ],
+        'no-multi-spaces': ['error', { ignoreEOLComments: false }],
         // 禁止 if 语句中 return 之后出现 eslint 块(可能有歧义，后面再改)
         'no-else-return': ['error', { allowElseIf: false }],
         // 禁止使用 label 语句
-        'no-labels': [
-            'error',
-            { allowLoop: false, allowSwitch: false },
-        ],
+        'no-labels': ['error', { allowLoop: false, allowSwitch: false }],
         // 强制要求 setter 和 getter 成对出现
         // 只定义 setter 会警告
         // 只定义 getter 会警告
@@ -413,10 +398,7 @@ module.exports = {
         'no-useless-rename': ['error'],
 
         // 强制要求箭头函数的箭头前后使用一致的空格
-        'arrow-spacing': [
-            'error',
-            { before: true, after: true },
-        ],
+        'arrow-spacing': ['error', { before: true, after: true }],
         // 要求回调函数中使用箭头函数
         'prefer-arrow-callback': [
             'error',
@@ -443,10 +425,7 @@ module.exports = {
          * import { a, b } from 'module';
          * export { b }
          */
-        'no-duplicate-imports': [
-            'error',
-            { includeExports: true },
-        ],
+        'no-duplicate-imports': ['error', { includeExports: true }],
         /**
                      * **强制模块中的 import 排序(这个规则后续在做调整)
                      * ignoreCase: 忽略大小写
@@ -464,12 +443,7 @@ module.exports = {
                 ignoreCase: false,
                 ignoreDeclarationSort: true,
                 ignoreMemberSort: true,
-                memberSyntaxSortOrder: [
-                    'none',
-                    'all',
-                    'multiple',
-                    'single',
-                ],
+                memberSyntaxSortOrder: ['none', 'all', 'multiple', 'single'],
             },
         ],
         // [ ES6相关 end ]

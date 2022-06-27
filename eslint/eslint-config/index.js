@@ -7,7 +7,5 @@
  * @Description: eslint config
  */
 module.exports = {
-    extends: [
-        '@wiede/eslint-config-vue'
-    ]
-}
+    extends: ['@wiede/eslint-config-vue'],
+};
