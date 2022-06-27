@@ -1,11 +1,5 @@
-/*
- * @FilePath: \neon-config\eslint\test\.prettierignore
- * @Author: maggot-code
- * @Date: 2022-06-24 14:52:08
- * @LastEditors: maggot-code
- * @LastEditTime: 2022-06-24 17:41:25
- * @Description: 
- */
+.vscode/
 dist/
 node_modules/
 public/
+settings.json
