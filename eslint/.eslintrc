@@ -4,12 +4,8 @@
         "./eslint-config-vue/index.js",
         "prettier"
     ],
-    "plugins": [
-        "prettier"
-    ],
+    "plugins": ["prettier"],
     "rules": {
-        "prettier/prettier": [
-            "error"
-        ]
+        "prettier/prettier": ["error"]
     }
 }
