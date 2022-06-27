@@ -3,10 +3,10 @@
  * @Author: zhangyang
  * @Date: 2022-06-27 10:49:42
  * @LastEditors: zhangyang
- * @LastEditTime: 2022-06-27 14:02:55
+ * @LastEditTime: 2022-06-27 14:18:35
  * @Description:
  */
-const a = 1;
+const a = '1';
 const b = 2;
 const c = 3;
 
