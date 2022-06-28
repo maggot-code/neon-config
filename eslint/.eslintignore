@@ -3,3 +3,10 @@ dist/
 node_modules/
 public/
 settings.json
+package.json
+pnpm-lock.yaml
+.eslintrc
+
+*.html
+*.vue
+*.json
